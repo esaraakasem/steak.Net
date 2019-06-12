@@ -1,0 +1,69 @@
+﻿@model SteakHouseApp.Models.Chefe
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Chefe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountFaceBook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountFaceBook)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountTwitter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountTwitter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountGmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountGmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="~/images/@Html.DisplayFor(modelItem => modelItem.Image)" alt="@Html.DisplayFor(modelItem => modelItem.Image)"
+                 class="thumbnail" style="width: 50px; height: 50px;" />
+        </dd>
+      
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

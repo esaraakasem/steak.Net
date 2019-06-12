@@ -1,0 +1,298 @@
+/* *****************************Start Media Query*************************** */
+
+@media (max-width: 549px) {
+
+
+
+}
+
+/* *************************************************************** */ 
+
+
+/* Small devices (landscape phones, 576px and up)  */
+@media (max-width: 767px) {
+
+    #home h1 {
+        font-size: 40px
+    }
+   
+    .Slide_Show {
+        height: 500px
+    }
+    
+    #home .txt {
+        padding-top: 25%
+    }
+    
+    .feature .content {
+        margin-bottom: 60px
+    }
+    
+    
+    .about .rtl .about-parag {
+        margin-top: 40px;
+        text-align: center;
+        margin-bottom: 60px
+    }
+    
+    .about .rtl img {
+        width: 80%;
+        height: 245px;
+        margin-left: 10%
+    }
+    
+    .about .flexslider {
+        width: 80%;
+        margin-left: 10%
+    }
+    
+     .about .flexslider-parag {
+        text-align: center
+    }
+    
+    .about .last {
+        margin-left: 10%;
+        width: 80%
+    }
+    
+    .about .last h2 {
+        margin-top: 55px
+    }
+    
+    .about .last ul {
+        margin-top: 20px;
+        margin-left: -20px
+    }
+    
+    .about .last p:first-of-type {
+        margin-top: 35px;
+    }
+    
+    .about .last p:nth-of-type(2) {
+        margin-top: 25px;
+    }
+    
+    .team .div1 , .team .div2 , .team .div3 , .team .div4 , .team .div5 , .team .div6  {
+        margin-bottom: 70px;
+        width: 70%;
+        margin-left: 15%
+    }
+    
+    .team .div5 , .team .div6 {
+        text-align: left
+    }
+    
+    .team  .div5 , .team  .div6 {
+        margin-top: 70px;
+        margin-bottom: 70px
+    }
+    
+    .team .div4 .fa {
+        margin-top: 50px
+    }
+    
+    .team .div4 p {
+        margin-top: 40px
+    }
+    
+    .menu .media .inner1 {top: 18%}
+    .menu .media .inner2 {top: 53.5%}
+    .menu .media .inner3 {bottom: 2%}
+    .menu .media .inner4 {top: 17%}
+    .menu .media .inner5 {bottom: 37%}
+    .menu .media .inner6 {bottom: 2%}
+
+    
+    .footer #Scroll-top {
+     
+        right: 0
+    }
+    
+    
+    .iso-box {
+         margin-bottom: 70px;
+        width: 70%;
+        margin-left: 15%
+    }
+    
+     .gallery-heading {
+        margin-bottom: 66px
+    }
+    
+     .filter-wrapper {
+        margin-bottom: 50px
+    }
+
+}
+
+
+
+
+/*  Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    
+    #home h1 {
+        font-size: 70px
+    }
+    
+    .Slide_Show {
+        height: 640px
+    }
+    
+        #home .txt {
+        padding-top: 29%
+    }
+    
+    .feature div .three {
+        margin-top: 70px;
+    }
+    
+    .about .rtl {
+        float: right
+    }
+    
+    .about .rtl .about-parag {
+        margin-top: 60px
+    }
+    
+    .about .rtl img {
+        width: 100%;
+        height: 272px
+    }
+    
+    .about .left {
+        float: right
+    }
+    
+    .about .last h2 {
+        margin-top: 55px
+    }
+    
+    .about .last ul {
+        margin-top: 20px;
+        margin-left: -20px
+    }
+    
+    .about .last p:first-of-type {
+        margin-top: 35px;
+    }
+    
+    .about .last p:nth-of-type(2) {
+        margin-top: 25px;
+    }
+    
+    .team .div1 , .team .div2 {
+        margin-bottom: 70px
+    }
+    
+    .team .div3 , .team .div4 {
+        margin-bottom: 10px
+    }
+    
+    .team  .div5 , .team  .div6 {
+        margin-top: 60px;
+        margin-bottom: 60px
+    }
+    
+    .menu .media .inner1 {top: 18%}
+    .menu .media .inner2 {top: 53.5%}
+    .menu .media .inner3 {bottom: 2%}
+    .menu .media .inner4 {top: 17%}
+    .menu .media .inner5 {bottom: 37%}
+    .menu .media .inner6 {bottom: 2%}
+
+}
+
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+     
+    .menu .media .inner1 {top: 16%}
+    .menu .media .inner2 {top: 49.5%}
+    .menu .media .inner3 {bottom: 9%}
+    .menu .media .inner4 {top: 16%}
+    .menu .media .inner5 {bottom: 42%}
+    .menu .media .inner6 {bottom: 9%}
+    
+   
+    
+    .about .rtl img {
+        width: 100%;
+        height: 272px
+    }
+
+    
+    .about .last h2 {
+        margin-top: -5px
+    }
+    
+    .about .last ul {
+        margin-top: 20px;
+        margin-left: -20px
+    }
+    
+    .about .last p:first-of-type {
+        margin-top: 35px;
+    }
+    
+    .about .last p:nth-of-type(2) {
+        margin-top: 25px;
+    }
+    
+    .team  .div5 , .team  .div6 {
+        margin-top: 60px;
+        margin-bottom: 60px
+    }
+    
+    .Slide_Show {
+        height: 640px
+    }
+    
+    #home h1 {
+        font-size: 85px
+    }
+    
+        #home .txt {
+        padding-top: 15%
+    }
+}
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    .team  .div5 , .team  .div6 {
+        margin-top: 60px;
+        margin-bottom: 60px
+    }
+    
+    
+    .about .last h2 {
+        margin-top: -5px
+    }
+    
+    
+    .about .last ul {
+        margin-top: 35px;
+        margin-left: -20px
+    }
+    
+    
+    .about .last p:first-of-type {
+        margin-top: 35px;
+    }
+    
+    .about .last p:nth-of-type(2) {
+        margin-top: 25px;
+    }
+    
+}
+
+
+
+/* *****************************End Media Query***************************** */
+
+ 

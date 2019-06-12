@@ -1,0 +1,404 @@
+﻿@model IEnumerable<SteakHouseApp.Models.Food>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Start Features -->
+
+<section class="feature text-center" id="Features">
+
+    <div class="container">
+
+        <div class="row">
+
+            <h2>WHY CHOOSE US?</h2>
+            <p class="myparagraph">STEAK HOUSE HTML CSS TEMPLATE</p>
+
+            <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-2 col-xs-8
+                                 wow fadeInUp animated" data-wow-delay=".3s">
+                <div class="content">
+                    <div class="myspan"><span><i class="fa fa-cutlery"></i></span></div>
+                    <h3>SPECIAL DISH</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-2 col-xs-8
+                                 wow fadeInUp animated" data-wow-delay=".6s">
+                <div class="content">
+                    <div class="myspan"><span><i class="fa fa-coffee"></i></span></div>
+                    <h3>BLACK COFFEE</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus.
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 col-sm-6 col-sm-offset-0 col-xs-offset-2 col-xs-8
+                                 wow fadeInUp animated" data-wow-delay=".9s">
+                <div class="content three">
+                    <div class="myspan"><span><i class="fa fa-bell-o"></i></span></div>
+                    <h3>DINNER</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <!-- End container -->
+
+</section>
+
+<!-- End Features -->
+<!-- --------------------------------------------------------------------------------------------- -->
+<!-- Start Section About -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3 col-sm-5 rtl wow bounceInLeft animated" data-wow-delay=".3s">
+                <img src="~/images/about-img.jpg" class="img-responsive">
+
+                <p class="lead about-parag">
+                    Nunc ullamcorper suscipit neque, ac malesuada purus molestie non.
+                </p>
+            </div>
+
+            <div class="col-md-5 col-sm-7 lft wow bounceInDown animated" data-wow-delay=".5s">
+
+                <!-- Place somewhere in the <body> of your page -->
+                <div class="flexslider">
+                    <ul class="slides">
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                <img src="~/images/@item.Image" alt="@item.Image" class="img-responsive" />
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <p class="flexslider-parag">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Lorem ipsum dolor sit amet.</p>
+
+            </div>
+
+
+            <div class="col-md-4  col-sm-12 last wow bounceInRight animated" data-wow-delay=".9s">
+
+                <h2>FINE DINING</h2>
+
+                <p>Vestibulum id iaculis nisl. Pellen nec tortor sagittis, scelerisque ante at, sollicitudin leo. Vivamus pulvinar a justo vel lobortis.</p>
+                <p>Steak House is free HTML website template for everyone. Please inform your friends about <a href="#about">Tooplate site.</a> </p>
+
+                <ul>
+                    <li>Donec fringilla ipsumInteger nec urna</li>
+                    <li>Integer nec urna</li>
+                    <li>Curabitur porta</li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!-- End row -->
+
+    </div>
+    <!-- End Container -->
+
+</section>
+<!-- End Section About -->
+<!-- --------------------------------------------------------------------------------------------- -->
+<!-- Start Section Vido -->
+<section class="vido text-center">
+
+    <div class="vido-overlay"></div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-offset-2 col-md-8 col-sm-12">
+
+                <a class="popup-youtube" href="https://www.youtube.com/watch?v=ztzIltjV_Wg">
+                    <i class="fa fa-play"></i>
+                </a>
+
+                <h2>WATCH THE VIDEO</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+
+            </div>
+
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <!-- End Container -->
+
+</section>
+<!-- End vido -->
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+<section class="menu" id="Menu">
+
+    <div class="container">
+
+        <div class="row">
+
+            <h2 class="text-center"> FOOD MENU </h2>
+            <p class="text-center menu-parag">WE HAVE SPECIAL MENUS</p>
+
+            <!-- --------------------------------------------------------------------------- -->
+            <!-- start Second col-md-6 -->
+
+            @foreach (var item in Model.Take(6))
+            {
+                if (item.Id % 2 == 0)
+                {<div class="col-md-6">
+                        <div class="media">
+                            <a class="pull-left" href="~/Home/Details/@item.Id">
+                                <img class="media-object media1 img-responsive" src="~/images/@item.Image" alt="@item.Image">
+                                <p class="inner @item.Id">$@item.Price</p>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">@item.Category.Name</h3>
+                                <p class="lead">@item.Details</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+
+                {
+                    <div class="col-md-6">
+                        <div class="media">
+                            <a class="pull-left" href="~/Home/Details/@item.Id">
+                                <img class="media-object media1 img-responsive" src="~/images/@item.Image" alt="@item.Image">
+                                <p class="inner @item.Id">$@item.Price</p>
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading">@item.Category.Name</h3>
+                                <p class="lead">@item.Details</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            }
+
+            <!-- End Second col-md-6 -->
+            <!-- --------------------------------------------------------------------------- -->
+
+        </div>
+        <!-- End Row -->
+
+    </div>
+    <!-- End Container -->
+
+</section>
+<!-- End Menu -->
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- Start Section  team -->
+
+<section class="team text-center" id="Team">
+
+    <div class="container">
+
+        <h2 class="text-center team-header">MEET OUR CHEFS</h2>
+        <p class="text-center team-parag">WE ARE FOOD SPECIALISTS</p>
+
+        <div class="row">
+
+            <!-- Start First Col -->
+            @foreach (var item in ViewBag.chefes)
+            {
+
+                <div class="col-md-3 col-sm-6">
+                    <!-- Start team-content -->
+                    <div class="team-content div" @item.Id>
+                        <div class="team-overlay">
+                            <h3>@item.Name</h3>
+                            <p>@item.Description</p>
+                            <ul class="social-icon">
+                                <li><a href="http://wwww.facebook.com/@item.AccountFaceBook" class="fa fa-facebook"></a></li>
+                                <li><a href="http://wwww.twitter.com/@item.AccountTwitter" class="fa fa-twitter"></a></li>
+                                <li><a href="http://wwww.Gmail.com/@item.AccountGmail" class="fa fa-google-plus"></a></li>
+                            </ul>
+                        </div>
+                        <img src="~/images/@item.Image" class="img-responsive">
+                        <div class="team-overlay-show">
+                            <h3>@item.Name</h3>
+                            <p>SENIOR CHEF</p>
+                        </div>
+                    </div>
+                    <!-- End Team-content -->
+                </div>
+
+            }
+
+            <!-- End First Col -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- Start Four Col -->
+            <div class="col-md-3 col-sm-6">
+                <!-- Start team-content -->
+                <div class="different-team1 div4">
+                    <i class="fa fa-plus"></i>
+                    <p class="lead">
+                        I want to Ask Can You Join with Us in our site
+                    </p>
+                    <a href="#Contact" class="btn btn-default  hvr-bounce-to-bottom">JOIN US</a>
+                </div>
+                <!-- End Team-content -->
+            </div>
+            <!-- End Four Col -->
+            <!-- -------------------------------------------------------------- -->
+
+        </div>
+        <!-- End First Row -->
+
+        <div class="row">
+
+            <!-- Start five Col -->
+            <div class="col-md-6">
+                <!-- Start team-content -->
+                <div class="div5 text-center">
+                    <h2>OUR SERVICE</h2>
+                    <p>Maecenas dictum cursus dui, quis mattis eros ultricies sed. Maecenas ligula nulla, dictum eu id, semper in orci. Fusce vel nisi hendrerit justo viverra vehicula in nec nunc. Curabitur blandit fringilla quam.</p>
+                </div>
+                <!-- End Team-content -->
+            </div>
+            <!-- End five Col -->
+            <!-- -------------------------------------------------------------- -->
+            <!-- Start six Col -->
+            <div class="col-md-6">
+                <!-- Start team-content -->
+                <div class="div6 text-center">
+                    <h2>OUR SERVICE</h2>
+                    <p>Maecenas dictum cursus dui, quis mattis eros ultricies sed. Maecenas ligula nulla, dictum eu id, semper in orci. Fusce vel nisi hendrerit justo viverra vehicula in nec nunc. Curabitur blandit fringilla quam.</p>
+                </div>
+                <!-- End Team-content -->
+            </div>
+            <!-- End six Col -->
+            <!-- ---------------------------------------------------- -->
+
+        </div>
+        <!-- End Second Section Row -->
+
+    </div>
+    <!-- End Section Container -->
+
+</section>
+
+<!-- End Section  team -->
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- Gallery section -->
+<section id="gallery">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
+                    <div class="wow fadeInUp section-title" data-wow-delay="0.3s">
+                        <h2>Food Gallery</h2>
+                        <h4 class="gallery-heading">we have special foods</h4>
+                    </div>
+                </div>
+
+                <!-- iso section -->
+                <div class="iso-section wow fadeInUp" data-wow-delay="0.6s">
+                    <ul class="filter-wrapper clearfix">
+                        <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
+                        @foreach (var item in ViewBag.Category)
+                        {
+                            <li><a href="#" class="opc-main-bg" data-filter=".@item.Name">@item.Name</a></li>
+                        }
+
+
+                    </ul>
+                    <!-- iso box section -->
+
+                    <div class="iso-box-section wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="iso-box-wrapper col4-iso-box">
+                            @foreach (var item in Model)
+                            {<div class="iso-box @item.Category.Name col-md-4 col-sm-6">
+                                    <div class="gallery-thumb">
+                                        <a href="~/images/@item.Image" data-lightbox-gallery="food-gallery">
+                                            <img src="~/images/@item.Image" class="img-responsive" alt="Gallery">
+                                            <div class="gallery-overlay">
+                                                <div class="gallery-item">
+                                                    <i class="fa fa-search"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <h3>@item.Name</h3>
+                                </div>}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p style="text-align: center">@ViewBag.messerror</p>
+<!-- ---------------------------------------------------------------------------------------------- -->
+<!-- Start Contact -->
+<section class="Contact">
+    <div class="Contact-overlay"></div>
+    <div class="container">
+
+        <div class="row">
+
+            <h2 class="text-center">SAY HELLO</h2>
+            <p class="text-center">WE ARE ALWAYS READY TO SERVE YOU!</p>
+
+            <div class="">
+
+                <!-- start Contact Form -->
+                <
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { role = "form", id = "Contact" }))
+                {
+                    <!-- start Div Form -->
+                    <div class="col-md-offset-2 col-md-8">
+
+                        <div class="form-group">
+                            @Html.TextBox("Name", null, new { @class = "form-control input-lg ", id = "UserName", placeholder = "UserName", required = true })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBox("Email", null, new { @class = "form-control input-lg", id = "Email", placeholder = "Email", required = true })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.TextArea("Message", null, new { @class = "form-control input-lg", id = "Message", placeholder = "Message", required = true })
+                        </div>
+
+                        <input type="submit" value="SEND MESSAGE" class="btn btn-default btn-block btn-lg " />
+
+
+                    </div>
+                    <!-- End Div Form -->
+                }
+                <!-- start Contact Form -->
+            </div>
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- End container -->
+
+</section>
+<!-- End Contact -->
+<!-- -------------------------------------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------------------------------- -->

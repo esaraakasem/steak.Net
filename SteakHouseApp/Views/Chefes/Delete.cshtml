@@ -1,0 +1,82 @@
+﻿@model SteakHouseApp.Models.Chefe
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Chefe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="~/images/@Html.DisplayFor(modelItem => modelItem.Image)" alt="@Html.DisplayFor(modelItem => modelItem.Image)"
+                 class="thumbnail" style="width: 50px; height: 50px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountFaceBook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountFaceBook)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountTwitter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountTwitter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountGmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountGmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Food_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food_Id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
